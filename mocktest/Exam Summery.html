@@ -1,0 +1,108 @@
+<!doctype html> 
+<html lang="en"> 
+<head>    
+<meta charset="UTF-8">    
+<title>Mock Test Summery</title> </head> 
+<body >    
+<h1>Mock Test Summery</h1>   
+ <table border = "1">      
+ <caption><p>Banking Exam</p></caption>       
+       
+         
+ <tr>        
+                    <th>S. No. </th>
+                    <th>Section Name</th>
+                    <th>Total Questions</th>
+                    <th>Max Score</th>
+                    <th>Time (minutes)</th>
+                    <th>Correct Answers</th>       
+                   <th>Wrong Answers</th>       
+                   <th> Your Marks</th>        
+ </tr>            
+ <tr>        
+                 <td>1</td>
+                 <td>English Language</td>
+                 <td>30</td>
+                 <td>30</td>
+                <td>20</td>
+                 <td><span id="ecorrectanser"></span></td>        
+                 <td><span id="ewronganser"></span></td>        
+                 <td><span id="etmarks"></span></td>        
+ </tr>         
+<tr>        
+                 <td>2</td>
+                 <td>Quantitative Aptitude</td>
+                 <td>35</td>
+                 <td>35</td>
+                <td>20</td>
+                 <td><span id="qcorrectanser"></span></td>        
+                 <td><span id="qwronganser"></span></td>        
+                 <td><span id="qtmarks"></span></td>        
+ </tr>      
+          
+ <tr>        
+                 <td>3</td>
+                 <td>Reasoning Ability</td>
+                 <td>35</td>
+                 <td>35</td>
+                <td>20</td>
+                 <td><span id="rqcorrectanser"></span></td>        
+                 <td><span id="rqwronganser"></span></td>        
+                 <td><span id="rqtmarks"></span></td>        
+ </tr>
+<tr>        
+                 <td>4</td>
+                 <td>Total</td>
+                 <td>100</td>
+                 <td>100</td>
+                <td>60</td>
+                 <td><span id="tqcorrectanser"></span></td>        
+                 <td><span id="tqwronganser"></span></td>        
+                 <td><span id="tqtmarks"></span></td>        
+ </tr>
+
+ 
+ </table>   
+<script onload> 
+ 
+ document.getElementById("ecorrectanser").innerHTML = localStorage.ecanser;
+ document.getElementById("ewronganser").innerHTML = localStorage.ewanser;
+ document.getElementById("etmarks").innerHTML = localStorage.emarks;
+ 
+ document.getElementById("qcorrectanser").innerHTML = localStorage.qcanser;
+ document.getElementById("qwronganser").innerHTML = localStorage.qwanser;
+ document.getElementById("qtmarks").innerHTML = localStorage.qmarks;
+ 
+ document.getElementById("rqcorrectanser").innerHTML = localStorage.rcanser;
+ document.getElementById("rqwronganser").innerHTML = localStorage.rwanser;
+ document.getElementById("rqtmarks").innerHTML = localStorage.rmarks;
+  
+  var ttmarks = localStorage.emarks + localStorage.qmarks + localStorage.rmarks; 
+   document.getElementById("ttmarks").innerHTML = ttmarks;
+  
+</script>
+<script unload>
+  localStorage.removeItem('ecanser');
+  localStorage.removeItem('ewanser');
+  localStorage.removeItem('emarks');
+  
+  localStorage.removeItem('qcanser');
+  localStorage.removeItem('qwanser');
+  localStorage.removeItem('qmarks');
+  
+  localStorage.removeItem('rcanser');
+  localStorage.removeItem('rwanser');
+  localStorage.removeItem('rmarks');
+  
+   
+  localStorage.removeItem('ttmarks');
+  
+  
+</script>
+
+
+
+
+ </html>
+ 
+ 
